@@ -37,15 +37,28 @@ img {
 /* === END CSS RESET === */
 
 /* COMPOSITION */
-:root {
-  --card-height: 374px;
-}
-
 body {
+  font-family: 'Kumbh Sans', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Kumbh Sans', sans-serif;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.background {
+  position: relative;
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
@@ -94,6 +107,7 @@ body {
   --light-gray-2: #e8e9ec;
   --profile-photo-size: 96px;
   --profile-photo-border: 5px;
+  --card-height: 374px;
 }
 
 .bg-primary {
@@ -184,10 +198,54 @@ body {
   :root {
     --card-width: 350px;
   }
+
+  .background {
+    width: 1440px;
+    height: 720px;
+  }
+
+  .background-container {
+    width: 1381.68px;
+    height: 1381.68px;
+  }
+
+  .background-top {
+    right: 545.16px;
+    bottom: 50.16px;
+  }
+
+  .background-bottom {
+    left: 490.16px;
+    top: 173.16px;
+  }
 }
 
 @media (width <= 375px) {
   :root {
     --card-width: 326px;
+  }
+
+  .background {
+    width: 375px;
+    height: 667px;
+  }
+
+  .background-container {
+    width: 878.94px;
+    height: 878.94px;
+  }
+
+  .background-container > * {
+    transform: scale(0.64, 0.64);
+  }
+
+  .background-top {
+    right: 34.53px;
+    bottom: 272.03px;
+  }
+
+  .background-bottom {
+    left: 36.53px;
+    top: 228.03px;
   }
 }
