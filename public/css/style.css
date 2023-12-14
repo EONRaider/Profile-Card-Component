@@ -76,9 +76,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: calc(
-    24px - var(--profile-photo-border) + var(--profile-photo-size) / 2
-  );
+  padding-top: calc(24px + var(--profile-photo-size) / 2);
   padding-bottom: 28px;
 }
 
@@ -86,7 +84,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 21px 54px 24px 47px;
+  padding: 23px 54px 24px 47px;
 }
 
 .card-stats-display {
@@ -137,8 +135,11 @@ body {
   border: var(--profile-photo-border) solid var(--white);
   border-radius: 96px;
   position: absolute;
-  top: calc((var(--profile-photo-size) + 2 * var(--profile-photo-border)) / -2);
-  left: calc((var(--card-width) - var(--profile-photo-size)) / 2);
+  top: calc((var(--profile-photo-size) / -2) - var(--profile-photo-border));
+  left: calc(
+    ((var(--card-width) - var(--profile-photo-size)) / 2) -
+      var(--profile-photo-border)
+  );
 }
 
 .card-user {
