@@ -20,7 +20,7 @@ A simple project using HTML5 and CSS3 that displays a profile card component con
 
 ### Screenshot
 
-![Profile-Card-Component](https://github.com/EONRaider/Profile-Card-Component/assets/15611424/fd267df9-94f0-416c-ba1e-d9c76d218312)
+![Profile-Card-Component](https://github.com/EONRaider/Profile-Card-Component/assets/15611424/e0efea0a-eaae-4eb6-9d67-f2241e636a83)
 
 ### Links
 
@@ -42,3 +42,4 @@ A simple project using HTML5 and CSS3 that displays a profile card component con
 ### What I learned
 
 - Got more familiar with the use of the `position` CSS property.
+- Getting the SVG circular linear-gradients to their right positions was a challenge. It took me longer than expected but it all worked out in the end.
