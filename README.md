@@ -20,6 +20,8 @@ A simple project using HTML5 and CSS3 that displays a profile card component con
 
 ### Screenshot
 
+![Profile-Card-Component](https://github.com/EONRaider/Profile-Card-Component/assets/15611424/fd267df9-94f0-416c-ba1e-d9c76d218312)
+
 ### Links
 
 - [My Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/project-name)
@@ -27,7 +29,15 @@ A simple project using HTML5 and CSS3 that displays a profile card component con
 
 ## My process
 
+1. I started with the markup on index.html, complying with HTML5 semantic tags and standards as much as possible.
+2. The styling provided by the project briefing was implemented first, followed by the classes I came up with on the markup.
+3. I used Figma to acquire all the right dimensions involved in the layout and implemented them in the appropriate CSS classes.
+4. The [CSS Cube](https://cube.fyi/) methodology was used when coding the stylesheet and some of the conventions from BEM were used when naming classes.
+
 ### Built with
+
+- Semantic HTML5 markup
+- Cube CSS methodology
 
 ### What I learned
 
