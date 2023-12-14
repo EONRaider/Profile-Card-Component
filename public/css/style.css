@@ -15,39 +15,23 @@ html {
 }
 
 /* Remove default margin in favour of better control in authored CSS */
-body, h1, h2, h3, h4, p,
-figure, blockquote, dl, dd {
-  margin-block-end: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  margin-block: 0;
 }
 
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  line-height: 1.5;
-}
-
-/* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4,
-button, input, label {
-  line-height: 1.1;
-}
-
-/* Balance text wrapping on headings */
-h1, h2,
-h3, h4 {
-  text-wrap: balance;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
 }
 
 /* Make images easier to work with */
@@ -58,19 +42,159 @@ picture {
 }
 
 /* Inherit fonts for inputs and buttons */
-input, button,
-textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-/* Make sure textareas without a rows attribute are not tiny */
-textarea:not([rows]) {
-  min-height: 10em;
-}
-
-/* Anything that has been anchored to should have extra scroll margin */
-:target {
-  scroll-margin-block: 5ex;
-}
-
 /* === END CSS RESET === */
+
+/* COMPOSITION */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.card {
+  width: var(--card-width);
+  flex-shrink: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.profile-photo-container {
+  position: relative;
+}
+
+.card-user-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: calc(
+    24px - var(--profile-photo-border) + var(--profile-photo-size) / 2
+  );
+  padding-bottom: 28px;
+}
+
+.card-stats-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 54px 24px 47px;
+}
+
+.card-stats-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* UTILITIES */
+:root {
+  --white: #ffffff;
+  --dark-blue-1: #19a1ae;
+  --dark-gray-1: #2e3349;
+  --light-gray-1: #6b7082;
+  --light-gray-2: #e8e9ec;
+  --profile-photo-size: 96px;
+  --profile-photo-border: 5px;
+}
+
+.bg-primary {
+  background-color: var(--dark-blue-1);
+}
+
+.bg-secondary {
+  background-color: var(--white);
+}
+
+.bg-shadow-deep {
+  box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.5);
+}
+
+.card-stats-display > * + * {
+  margin-top: 5px;
+}
+
+/* BLOCK */
+.card__top-pattern {
+  display: block;
+  min-height: 140px;
+}
+
+.card__profile-photo {
+  box-sizing: content-box;
+  width: var(--profile-photo-size);
+  height: var(--profile-photo-size);
+  flex-shrink: 0;
+  border: var(--profile-photo-border) solid var(--white);
+  border-radius: 96px;
+  position: absolute;
+  top: calc((var(--profile-photo-size) + 2 * var(--profile-photo-border)) / -2);
+  left: calc((var(--card-width) - var(--profile-photo-size)) / 2);
+}
+
+.card-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-user__name {
+  color: var(--dark-gray-1);
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 8.5px;
+}
+
+.card-user__age {
+  color: var(--light-gray-1);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.card-user__location {
+  color: var(--light-gray-1);
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 11px;
+}
+
+.card__ruler {
+  width: 100%;
+  height: 1px;
+  flex-shrink: 0;
+  background-color: var(--light-gray-2);
+}
+
+.card-stats__count {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card-stats__text {
+  color: var(--light-gray-1);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+/* EXCEPTIONS */
+@media (width > 375px) {
+  :root {
+    --card-width: 350px;
+  }
+}
+
+@media (width <= 375px) {
+  :root {
+    --card-width: 326px;
+  }
+}
