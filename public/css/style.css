@@ -76,6 +76,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 145px;
   padding-top: calc(24px + var(--profile-photo-size) / 2);
   padding-bottom: 28px;
 }
