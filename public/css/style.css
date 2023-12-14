@@ -18,13 +18,7 @@ html {
 body,
 h1,
 h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
+p {
   margin: 0;
   margin-block: 0;
 }
@@ -35,18 +29,9 @@ body {
 }
 
 /* Make images easier to work with */
-img,
-picture {
+img {
   max-width: 100%;
   display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
 }
 
 /* === END CSS RESET === */
