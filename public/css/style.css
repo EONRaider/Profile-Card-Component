@@ -23,11 +23,6 @@ p {
   margin-block: 0;
 }
 
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-}
-
 /* Make images easier to work with */
 img {
   max-width: 100%;
@@ -38,6 +33,7 @@ img {
 
 /* COMPOSITION */
 body {
+  min-height: 100vh;
   font-family: 'Kumbh Sans', sans-serif;
   display: flex;
   justify-content: center;
